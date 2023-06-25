@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MoviesManagement.Domain.Repository
 {
-    internal interface IBiografiaRepository
+    public interface IBiografiaRepository
     {
     }
 }
