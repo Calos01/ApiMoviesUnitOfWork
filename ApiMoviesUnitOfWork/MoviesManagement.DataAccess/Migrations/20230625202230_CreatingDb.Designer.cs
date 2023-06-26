@@ -11,7 +11,7 @@ using MoviesManagement.DataAccess.Context;
 namespace MoviesManagement.DataAccess.Migrations
 {
     [DbContext(typeof(MoviesManagementDbContext))]
-    [Migration("20230624003905_CreatingDb")]
+    [Migration("20230625202230_CreatingDb")]
     partial class CreatingDb
     {
         /// <inheritdoc />

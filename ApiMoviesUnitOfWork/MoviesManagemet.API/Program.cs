@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using MoviesManagement.DataAccess.Context;
+using MoviesManagement.DataAccess.Implementacion;
+using MoviesManagement.Domain.Repository;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,12 @@ builder.Services.AddSwaggerGen();
 
 //DbContext
 builder.Services.AddDbContext<MoviesManagementDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("ConexionDb")));
+
+//Unitof Work
+builder.Services.AddTransient<IUnitOfWorkRepository, UnitOfWorkRepository>();
+
+//Ignorar Cycle
+builder.Services.AddMvc().AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 
 var app = builder.Build();
 

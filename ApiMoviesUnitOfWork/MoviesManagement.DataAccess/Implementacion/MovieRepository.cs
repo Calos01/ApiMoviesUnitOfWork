@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MoviesManagement.DataAccess.Implementacion
 {
-    internal class MovieRepository : GenericRepository<Movie>, IMovieRepository
+    public class MovieRepository : GenericRepository<Movie>, IMovieRepository
     {
         public MovieRepository(MoviesManagementDbContext context) : base(context)
         {

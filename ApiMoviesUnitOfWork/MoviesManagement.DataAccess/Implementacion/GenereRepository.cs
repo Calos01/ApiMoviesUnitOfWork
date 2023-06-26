@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace MoviesManagement.DataAccess.Implementacion
 {
-    public class BiografiaRepository:GenericRepository<Biografia>, IBiografiaRepository
+    public class GenereRepository:GenericRepository<Genere>,IGenereRepository
     {
-        public BiografiaRepository(MoviesManagementDbContext context) : base(context)
+        public GenereRepository(MoviesManagementDbContext context) : base(context)
         {
             
         }
