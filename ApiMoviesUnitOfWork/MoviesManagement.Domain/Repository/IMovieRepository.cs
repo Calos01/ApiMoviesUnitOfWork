@@ -9,5 +9,7 @@ namespace MoviesManagement.Domain.Repository
 {
     public interface IMovieRepository:IGenericRepository<Movie>
     {
+        public IEnumerable<Movie> GetMoviesWithActor();
+
     }
 }

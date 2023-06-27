@@ -11,8 +11,8 @@ namespace MoviesManagement.Domain.Entities
         public int Id { get; set; }
         public string FirstName { get; set; }=string.Empty;
         public string LastName { get; set; } = string.Empty;
-        public List<Movie>? Movies { get; set; }
-        public Biografia? Biografia { get; set;}
+        //public List<Movie>? Movies { get; set; }
+        //public Biografia? Biografia { get; set;}
 
     }
 }
