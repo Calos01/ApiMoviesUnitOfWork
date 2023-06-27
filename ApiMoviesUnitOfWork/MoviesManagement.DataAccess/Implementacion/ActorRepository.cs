@@ -17,9 +17,9 @@ namespace MoviesManagement.DataAccess.Implementacion
             
         }
 
-        public IEnumerable<Actor> GetActorWithMovies()
-        {
-            return _context.Actors.Include(a => a.Movies).ToList();
-        }
+        //public IEnumerable<Actor> GetActorWithMovies()
+        //{
+        //    return _context.Actors.Include(a => a.Movies).ToList();
+        //}
     }
 }
