@@ -38,6 +38,7 @@ namespace MoviesManagement.DataAccess.Context
                     new Movie{ Id= 2, Name="Moonlight", Description="Pelicula para nacos", ActorId=1},
                     new Movie{ Id= 3, Name="Barry", Description="Obra Maestra", ActorId=2}
                 );
+
         }
     }
 }
