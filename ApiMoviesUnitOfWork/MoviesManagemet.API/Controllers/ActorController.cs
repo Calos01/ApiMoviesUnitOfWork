@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MoviesManagement.DataAccess.Context;
 using MoviesManagement.Domain.Entities;
 using MoviesManagement.Domain.Repository;
+using System.Data;
 
 namespace MoviesManagemet.API.Controllers
 {
@@ -10,10 +12,12 @@ namespace MoviesManagemet.API.Controllers
     public class ActorController : ControllerBase
     {
         private readonly IUnitOfWorkRepository _unitofwork;
+        private readonly MoviesManagementDbContext _context;
 
-        public ActorController(IUnitOfWorkRepository unitofwork)
+        public ActorController(IUnitOfWorkRepository unitofwork, MoviesManagementDbContext context)
         {
             _unitofwork = unitofwork;
+            _context = context;
         }
 
         [HttpGet]
@@ -21,6 +25,7 @@ namespace MoviesManagemet.API.Controllers
         {
             return Ok(_unitofwork.Actor.GetAll());
             //return Ok(_unitofwork.Movie.GetAll());
+
         }
 
         //[HttpGet("GetMovies")]
